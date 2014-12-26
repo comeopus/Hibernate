@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="org.whut.hibernate.module.Team" table="team" >
+      <id name="id" column="id" type="string">
+          <generator class="uuid"/>
+      </id>
+      <property name="teamName"  column="teamName" type="string"/>
+
+      <list name="students" table="student" cascade="all">
+          <key column="team_id"></key>
+          <index column="index_"></index> <!--list中特有的   用于排序-->
+          <one-to-many class="org.whut.hibernate.module.Student"/>
+      </list>
+    </class>
+
+
+
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="org.whut.hibernate.module.Course" table="course">
+        <id name="id" column="id" type="string">
+            <generator class="uuid"/>
+        </id>
+        <property name="name"  column="name" type="string"/>
+         <!--多对多有一个中间表要体现出来   cascade不能设置为all -->
+        <set name="students" table="student_course" cascade="save-update" inverse="true">
+            <key column="course_id"></key>     <!--这个id是指对方的外键-->
+            <many-to-many class="org.whut.hibernate.module.Student" column="student_id"></many-to-many>
+        </set>
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="org.whut.hibernate.module.Team" table="team" >
+      <id name="id" column="id" type="string">
+          <generator class="uuid"/>
+      </id>
+      <property name="teamName"  column="teamName" type="string"/>
+
+      <!--数据库排序用order by   内存排序用sort属性，它有两个属性值 unsorted,natural
+      <set name="students" table="student" order-by="name asc">
+          <key column="team_id"></key>
+          <element column="name" type="string"/>
+      </set>    -->
+
+      <set name="students" table="student" sort="natural">
+          <key column="team_id"></key>
+          <element column="name" type="string"/>
+      </set>
+    </class>
+
+
+
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <!--如果需要使用延迟加载  在被延迟加载的那一方中进行设置constrained-->
+    <!--  这是主键关联的配置-->
+  <!-- <class name="org.whut.hibernate.module.IdCard" table="idcard" lazy="true">
+        <id name="id" column="id" type="string">
+            <generator class="foreign">
+                <param name="property">student</param>
+            </generator>
+        </id>
+        <property name="number"  column="number" type="integer"/>
+
+        <one-to-one name="student" class="org.whut.hibernate.module.Student" fetch="select" constrained="true" />
+    </class>   -->
+     <!--外键关联的配置-->
+    <class name="org.whut.hibernate.module.IdCard" table="idcard" >
+        <id name="id" column="id" type="string">
+            <generator class="uuid"/>
+        </id>
+        <property name="number"  column="number" type="integer"/>
+
+        <many-to-one name="student" class="org.whut.hibernate.module.Student" fetch="select" unique="true" column="student_id"/>
+    </class>
+
+
+</hibernate-mapping>

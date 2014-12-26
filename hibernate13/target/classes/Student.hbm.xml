@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="org.whut.hibernate.module.Student" table="student">
+
+        <composite-id name="studentPrimaryKey" class="org.whut.hibernate.module.StudentPrimaryKey">
+            <key-property name="cardId" column="cardId" type="string"/>
+             <key-property name="name" column="name" type="string"/>
+        </composite-id>
+        <property name="age" column="age" type="int"/>
+    </class>
+
+</hibernate-mapping>

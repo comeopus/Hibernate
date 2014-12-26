@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="org.whut.hibernate.module.Category" table="categories">
+        <id name="id" column="id" type="long">
+            <generator class="increment"/>
+        </id>
+        <property name="name"  column="name" type="string"/>
+        <set name="childCategory" cascade="all" inverse="true">
+            <key column="category_id"></key>
+            <one-to-many class="org.whut.hibernate.module.Category"/>
+        </set>
+
+        <many-to-one name="parentCategory" column="category_id" class="org.whut.hibernate.module.Category"/>
+    </class>
+
+</hibernate-mapping>

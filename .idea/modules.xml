@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Hibernate.iml" filepath="$PROJECT_DIR$/Hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate/hibernate.iml" filepath="$PROJECT_DIR$/hibernate/hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate10/hibernate10.iml" filepath="$PROJECT_DIR$/hibernate10/hibernate10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate11/hibernate11.iml" filepath="$PROJECT_DIR$/hibernate11/hibernate11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate12/hibernate12.iml" filepath="$PROJECT_DIR$/hibernate12/hibernate12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate13/hibernate13.iml" filepath="$PROJECT_DIR$/hibernate13/hibernate13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate14/hibernate14.iml" filepath="$PROJECT_DIR$/hibernate14/hibernate14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate15/hibernate15.iml" filepath="$PROJECT_DIR$/hibernate15/hibernate15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate16/hibernate16.iml" filepath="$PROJECT_DIR$/hibernate16/hibernate16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate17/hibernate17.iml" filepath="$PROJECT_DIR$/hibernate17/hibernate17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate18/hibernate18.iml" filepath="$PROJECT_DIR$/hibernate18/hibernate18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate19/hibernate19.iml" filepath="$PROJECT_DIR$/hibernate19/hibernate19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate2/hibernate2.iml" filepath="$PROJECT_DIR$/hibernate2/hibernate2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate20/hibernate20.iml" filepath="$PROJECT_DIR$/hibernate20/hibernate20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate21/hibernate21.iml" filepath="$PROJECT_DIR$/hibernate21/hibernate21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate3/hibernate3.iml" filepath="$PROJECT_DIR$/hibernate3/hibernate3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate4/hibernate4.iml" filepath="$PROJECT_DIR$/hibernate4/hibernate4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate5/hibernate5.iml" filepath="$PROJECT_DIR$/hibernate5/hibernate5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate6/hibernate6.iml" filepath="$PROJECT_DIR$/hibernate6/hibernate6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate7/hibernate6 (1).iml" filepath="$PROJECT_DIR$/hibernate7/hibernate6 (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate8/hibernate8.iml" filepath="$PROJECT_DIR$/hibernate8/hibernate8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate9/hibernate9.iml" filepath="$PROJECT_DIR$/hibernate9/hibernate9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ognl/ognl.iml" filepath="$PROJECT_DIR$/ognl/ognl.iml" />
+    </modules>
+  </component>
+</project>
+

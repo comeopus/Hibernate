@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="org.whut.hibernate.module.Student" table="student">
+        <id name="id" column="id" type="string">
+            <generator class="uuid"/>
+        </id>
+        <property name="name"  column="name" type="string"/>
+        <!--fetch不是指检索策略而是指检索方式   默认的是join-->
+        <one-to-one name="idCard" class="org.whut.hibernate.module.IdCard" cascade="all" constrained="true" fetch="join">
+        </one-to-one>
+        <many-to-one name="team" class="org.whut.hibernate.module.Team" column="team_id" cascade="all" fetch="select"/>
+    </class>
+
+</hibernate-mapping>

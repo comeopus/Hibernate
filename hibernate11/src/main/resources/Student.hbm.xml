@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="org.whut.hibernate.module.Student" table="student">
+        <id name="id" column="id" type="string">
+            <generator class="uuid"/>
+        </id>
+        <property name="name"  column="name" type="string"/>
+        <property name="cardId"  column="cardId" type="string"/>
+        <property name="age"  column="age" type="integer"/>
+        <many-to-one name="team" class="org.whut.hibernate.module.Team" column="team_id" cascade="all" fetch="select"/>
+    </class>
+
+</hibernate-mapping>

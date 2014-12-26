@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="hibernate" />
+        <module name="hibernate10" />
+        <module name="hibernate11" />
+        <module name="hibernate12" />
+        <module name="hibernate13" />
+        <module name="hibernate14" />
+        <module name="hibernate15" />
+        <module name="hibernate16" />
+        <module name="hibernate17" />
+        <module name="hibernate18" />
+        <module name="hibernate19" />
+        <module name="hibernate2" />
+        <module name="hibernate20" />
+        <module name="hibernate21" />
+        <module name="hibernate3" />
+        <module name="hibernate4" />
+        <module name="hibernate5" />
+        <module name="hibernate6" />
+        <module name="hibernate6 (1)" />
+        <module name="hibernate8" />
+        <module name="hibernate9" />
+        <module name="ognl" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
+

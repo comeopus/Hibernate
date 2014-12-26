@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <!-- 多态查询  -->
+    <class name="org.whut.hibernate.module.Person" table="person">
+
+        <id name="id" column="id" type="string">
+            <generator class="uuid" />
+        </id>
+
+        <property name="name" column="name" type="string"/>
+
+        <joined-subclass name="org.whut.hibernate.module.Student" table="student">
+            <key column="id"></key>
+            <property name="cardId" type="string" column="cardId"/>
+        </joined-subclass>
+
+        <joined-subclass name="org.whut.hibernate.module.Teacher" table="teacher">
+            <key column="id"></key>
+            <property name="salary" column="salary" type="int"/>
+        </joined-subclass>
+
+
+
+    </class>
+
+</hibernate-mapping>

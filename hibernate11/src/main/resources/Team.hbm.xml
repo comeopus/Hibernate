@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <!--如果需要使用延迟加载  在被延迟加载的那一方中进行设置constrained-->
+    <!--  这是主键关联的配置-->
+  <class name="org.whut.hibernate.module.Team" table="team" >
+      <id name="id" column="id" type="string">
+          <generator class="uuid"/>
+      </id>
+      <property name="name"  column="name" type="string"/>
+      <!--插入的时候   sort属性不能添加进去  否则会出异常-->
+      <set name="students" lazy="false" cascade="all" inverse="true" sort="org.whut.hibernate.module.MyComparator">
+          <key column="team_id"></key>
+          <one-to-many class="org.whut.hibernate.module.Student" />
+      </set>
+    </class>
+
+
+
+</hibernate-mapping>

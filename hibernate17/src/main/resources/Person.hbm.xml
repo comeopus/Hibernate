@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <!-- 多态查询  -->
+    <class name="orh.whut.hibernate.module.Person" table="person">
+
+        <id name="id" column="id" type="string">
+            <generator class="uuid" />
+        </id>
+
+        <discriminator column="personType" type="string"/>
+
+        <property name="name" column="name" type="string"/>
+        <subclass name="orh.whut.hibernate.module.Student" discriminator-value="student">
+            <property name="cardId" type="string"/>
+        </subclass>
+
+        <subclass name="orh.whut.hibernate.module.Teacher" discriminator-value="teacher">
+            <property name="salary" type="int"/>
+        </subclass>
+
+    </class>
+
+</hibernate-mapping>

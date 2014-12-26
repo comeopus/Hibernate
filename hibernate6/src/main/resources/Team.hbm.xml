@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="org.whut.hibernate.module.Team" table="team" >
+      <id name="id" column="id" type="string">
+          <generator class="uuid"/>
+      </id>
+      <property name="teamName"  column="teamName" type="string"/>
+      <!--order by是指查询的时候按name进行升序排列  name不是属性   是字段的名字   降序desc   升序为asc -->
+
+      <map name="students" table="student" order-by="name desc">
+          <key column="team_id"></key>
+          <index column="name" type="java.lang.String"></index>    <!-- 指定的是map中的key值-->
+          <element column="description" type="java.lang.String"></element> <!--指定的是map中的value值-->
+      </map>
+    </class>
+
+
+
+</hibernate-mapping>
